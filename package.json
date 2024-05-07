@@ -1,0 +1,11 @@
+{
+  "name": "playwright-ts",
+  "version": "1.0.0",
+  "description": "# npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ghazal Shahin",
+  "license": "ISC"
+}
