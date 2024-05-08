@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "# npm",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:ui": "npx playwright test --ui",
+    "test:headless": "npx playwright test"
+  },
   "author": "Ghazal Shahin",
   "license": "ISC",
   "devDependencies": {
