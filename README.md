@@ -1,5 +1,5 @@
-# Playwright-Ts
+# Playwright-Basics
 
-# npm 
+# npm project 
 
-Playwright automation framework
+Playwright automation framework - A Layton
