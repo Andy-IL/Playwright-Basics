@@ -1,5 +1,5 @@
 {
-  "name": "playwright-ts",
+  "name": "playwright-basics",
   "version": "1.0.0",
   "description": "# npm",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test:ui": "npx playwright test --ui",
     "test:headless": "npx playwright test"
   },
-  "author": "Ghazal Shahin",
+  "author": "Andrew Layton",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.44.0",
