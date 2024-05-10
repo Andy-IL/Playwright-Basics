@@ -1,4 +1,4 @@
-import { test, expect, Page } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('https://demo.playwright.dev/todomvc');
@@ -18,7 +18,7 @@ test.describe('New Todo', () => {
     // Create 1st todo.
     await newTodo.fill(TODO_ITEMS[0]);
     await newTodo.press('Enter');
-    await page.pause();
+
     // Make sure the list only has one todo item.
     await expect(page.getByTestId('todo-title')).toHaveText([
       TODO_ITEMS[0]
@@ -48,7 +48,6 @@ test.describe('New Todo', () => {
     // Check that input is empty.
     await expect(newTodo).toBeEmpty();
     await checkNumberOfTodosInLocalStorage(page, 1);
-    await page.pause() ;
   });
 
   test('should append new items to the bottom of the list', async ({ page }) => {
@@ -120,7 +119,7 @@ test.describe('Mark all as completed', () => {
   });
 });
 
-test.describe('Mark & Edit Items', () => {
+test.describe('Item', () => {
 
   test('should allow me to mark items as complete', async ({ page }) => {
     // create a new todo locator
@@ -322,7 +321,7 @@ test.describe('Persistence', () => {
 
     // Ensure there is 1 completed item.
     await checkNumberOfCompletedTodosInLocalStorage(page, 1);
-    
+
     // Now reload.
     await page.reload();
     await expect(todoItems).toHaveText([TODO_ITEMS[0], TODO_ITEMS[1]]);

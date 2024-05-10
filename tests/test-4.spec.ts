@@ -46,3 +46,7 @@ test('Canary & latest Releases', async ({ page })  => {
   await page.getByRole('link', { name: 'CI GitHub Actions' }).click();
   await page.getByRole('link', { name: 'doc on Continuous Integration' }).click();
 }) ;
+
+test.afterAll (async ({ page }) => {
+  page.close() ;
+});

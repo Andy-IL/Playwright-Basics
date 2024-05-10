@@ -1,0 +1,23 @@
+import { test, expect } from '@playwright/test';
+
+ const { chromium } = require('playwright');
+
+ const launchOptions = {
+    args: ['--URL=https://playwright.dev/'],
+  };
+test.describe('Test Suite', () => {
+   let browser;
+
+   test.beforeEach (async ({ page }) => {
+    await page.goto('https://playwright.dev');
+
+  }) ;
+ 
+//   afterAll(async () => {
+//     await browser.close();
+//   });
+
+  // Import and run individual test files
+  require('./example.spec.ts');
+//  require('./registration.test');
+});
