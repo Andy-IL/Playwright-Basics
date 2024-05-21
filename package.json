@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test:ui": "npx playwright test --ui",
-    "test:headless": "npx playwright test"
+    "test:head": "npx playwright test --headed",
+    "generate:report" : "npx playwright show-report",
+    "execute:all": "npx playwright test && npx playwright show-report"
   },
   "author": "Andrew Layton",
   "license": "ISC",
@@ -14,6 +16,8 @@
     "@types/node": "^20.12.10"
   },
   "dependencies": {
-    "fast-csv": "^5.0.1"
+    "fast-csv": "^5.0.1",
+    "tsc": "^2.0.4",
+    "artillery": "^2.0.11"
   }
 }

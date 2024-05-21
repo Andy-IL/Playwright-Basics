@@ -12,7 +12,7 @@ test('test01', async ({ page }) => {
 
 await page.goto('https://www.bbc.co.uk/sport/football/scores-fixtures');
 await page.getByRole('button', { name: 'Yes, I agree' }).click();
-await page.getByRole('heading', { name: 'Welsh Premier League' }).click();
+await page.getByRole('heading', { name: 'Premier League' }).click();
 await page.getByRole('link', { name: 'Partick Thistle versus' }).click();
 await page.getByTestId('datepicker-date-link-2024-05-09')
 });

@@ -1,6 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
+   // test.beforeAll(async ({ page }) => {
     await page.goto('https://example.cypress.io/todo');
 
 }) ;
@@ -20,7 +21,7 @@ test.describe('new ToDo', () => {
     test('add todo item 1', async ({ page }) => {
         // create 1st todo. 
         await page.locator('.new-todo').fill(TODO_ITEMS[0]);
-        await page.locator('.new-todo').press('Enter', 1000);
+        await page.locator('.new-todo').press('Enter');
 //        await expect(page.getByTestId('todo-title')).toHaveText([TODO_ITEMS[0]]);
         await expect(page.getByText(TODO_ITEMS[0])).toHaveText([TODO_ITEMS[0]]);
 
@@ -53,3 +54,7 @@ test.describe('new ToDo', () => {
 
 
 }); 
+test.afterEach (async ({ page }) => {
+    await page.close();
+
+}) ;

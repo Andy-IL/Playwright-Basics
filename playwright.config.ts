@@ -27,11 +27,11 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     // Run browser in headless mode.
-    headless: false,
+     headless: false,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    screenshot: "on", 
-    video: "on", 
+    // screenshot: "on", 
+    // video: "on", 
     launchOptions: {
       slowMo: 300,
     },
